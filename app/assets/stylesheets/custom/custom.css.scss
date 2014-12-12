@@ -1,0 +1,42 @@
+/*--------------------------
+Reusable Object-Oriented
+--------------------------*/
+
+ul.no-bullet {
+  list-style: none;
+  padding-left: 0em;
+  vertical-align: text-top;
+}
+
+textarea {
+  max-width: 100%;
+  resize: vertical;
+
+  min-height: 50px;
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  padding: 5px;
+
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.hidden-textarea-clone {
+    display: none;
+    
+    min-width: 100%;
+    max-width: 100%;
+
+    min-height: 50px;
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    padding: 5px;
+
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/*--------------------------
+By Item
+--------------------------*/
+

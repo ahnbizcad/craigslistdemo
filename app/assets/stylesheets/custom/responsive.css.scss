@@ -1,0 +1,57 @@
+/**************************
+RESPONSIVE CUTOFF WIDTHS
+**************************/
+
+/*----------------------------------------
+ONLY xs devices (phones, 1px to 767px) (doesn't cascade)
+----------------------------------------*/
+/*@media only screen and (max-width: $screen-xs-max) { 
+  
+}*/
+
+
+/*--------------------------------------------------------------------------------*/
+
+
+/*----------------------------------------
+xs is default. Smaller sizes cascade to larger sizes. Flow structure.
+----------------------------------------*/
+
+
+/*----------------------------------------
+sm devices (tablets, 748px and up)
+----------------------------------------*/
+@media only screen and (min-width: $screen-sm){ 
+
+
+}
+
+
+/*----------------------------------------
+md devices (desktops, 992px and up)
+----------------------------------------*/
+@media only screen and (min-width: $screen-md){
+  
+}
+
+/*----------------------------------------
+lg devices (large desktops, 1200px and up)
+----------------------------------------*/
+@media only screen and (min-width: $screen-lg){ 
+
+
+}
+
+
+/*----------------------------------------
+Misc touchups
+----------------------------------------*/
+
+/*  Very useful pattern  for spacing collections */
+/* 
+@media (max-width: 991px) { 
+  [class*="col-"]:not(:first-child){
+      margin-top: 40px;
+  }
+}
+*/
