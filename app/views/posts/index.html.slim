@@ -1,0 +1,49 @@
+.container-fluid
+  .row
+    .col-xs-12
+      h1 Listing posts
+
+      = render "filter"
+
+      = link_to 'New Post', new_post_path
+
+      - if @posts.blank?
+        hr
+        h4.text-center
+          p No results found.
+      - else
+        table.table-bordered
+          thead
+            tr
+              th
+              th Heading
+              th Price
+              th Neighborhood
+              th Timestamp
+              th bedrooms
+              th bathrooms
+              th sqft
+              th cats
+              th dogs
+              th w_d_in_unit
+              th street_parking
+
+          tbody
+            - @posts.each do |post|
+              tr
+                td = link_to 'Show', post
+                td = post.heading
+                td = post.price
+                td = post.neighborhood
+                td = post.timestamp
+                td = post.bedrooms
+                td = post.bathrooms
+                td = post.sqft
+                td = post.cats
+                td = post.dogs
+                td = post.w_d_in_unit
+                td = post.street_parking
+
+
+
+

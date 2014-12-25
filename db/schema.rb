@@ -11,10 +11,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141212040930) do
+ActiveRecord::Schema.define(version: 20141225035307) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "anchors", force: true do |t|
+    t.string   "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "images", force: true do |t|
+    t.string   "url"
+    t.integer  "post_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "images", ["post_id"], name: "index_images_on_post_id", using: :btree
+
+  create_table "locations", force: true do |t|
+    t.string   "code"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "posts", force: true do |t|
+    t.string   "heading"
+    t.text     "body"
+    t.decimal  "price"
+    t.string   "external_url"
+    t.string   "neighborhood"
+    t.string   "timestamp"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "bedrooms"
+    t.decimal  "bathrooms"
+    t.integer  "sqft"
+    t.string   "cats"
+    t.string   "dogs"
+    t.string   "w_d_in_unit"
+    t.string   "street_parking"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

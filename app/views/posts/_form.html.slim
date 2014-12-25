@@ -1,0 +1,12 @@
+= simple_form_for(@post) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :heading
+    = f.input :body
+    = f.input :price
+    = f.input :neighborhood
+    = f.input :timestamp
+
+  .form-actions
+    = f.button :submit

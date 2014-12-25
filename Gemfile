@@ -34,7 +34,7 @@ gem 'figaro', '~> 0.7.0'
 
 gem 'devise'
 
-gem 'simple_form', '~> 3.1.0.rc1'
+gem 'simple_form', '~> 3.1.0.rc1', github: 'plataformatec/simple_form', branch: 'master'
 
 #gem 'image_size', '~> 1.3.1'
 #gem 'fastimage', '~> 1.6.4'
