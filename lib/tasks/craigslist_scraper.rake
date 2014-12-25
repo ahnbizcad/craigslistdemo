@@ -64,6 +64,15 @@ namespace :craigslist_scraper do
 
   end
 
+  desc "Discard old data"
+  task  discard_old_data: :environment do
+    Post.all.each do |post|
+      if post.created_at < 3.hours.ago
+        post.destroy
+      end
+    end
+  end
+
 
   desc "Destroy all posting data"
   task destroy_all_posts: :environment do
@@ -91,7 +100,7 @@ namespace :craigslist_scraper do
     html = open(uri).read
     result = JSON.parse(html)
 
-    # Display results to screen
+    # Print results.
     puts JSON.pretty_generate result
 
     result["locations"].each do |location|
