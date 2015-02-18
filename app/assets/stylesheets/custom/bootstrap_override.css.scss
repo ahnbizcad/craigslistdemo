@@ -6,6 +6,10 @@ pre {
   margin-bottom: 0;
 }
 
+.jumbotron {
+  margin-bottom: 0px;
+}
+
 .navbar {
 
 }
@@ -25,5 +29,11 @@ pre {
 }
 #navbar {
   text-wrap: none;
+}
+
+
+
+.form-inline .form-control, .navbar-form .form-control {
+  width: 100%;
 }
 

@@ -12,18 +12,19 @@
  *
  */
 
+
 /* */
 /* RESET */
 /* */
 @import "custom/reset";
  
+
 /* */
 /* FRAMEWORKS */
 /* */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-/*@import "font-awesome-sprockets";*/
-/*@import "font-awesome";*/
+
  
 /* */
 /* BLANKET STYLES */
@@ -33,6 +34,7 @@
 @import "custom/custom";
 @import "custom/responsive";
  
+
 /* */
 /* Plugin-Specific Styles */
 /* */
@@ -41,3 +43,4 @@
 /* */
 /* TREE SUBSTITUTE */
 /* */ 
+@import "posts";

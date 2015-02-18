@@ -40,11 +40,15 @@ textarea {
 By Item
 --------------------------*/
 
-#jumbo-main {
+#jumbotron-main {
   background-image: url(http://pinterous.com/wp-content/uploads/2014/07/studio-apartments-for-rent-in-financial-district-nyc.jpg);
   background-size: cover;
-  height: 800px;
+  min-height: 800px;
+
+  padding: 100px 0px;
+
   h1 {
+    color: white;
     text-shadow: 0px 2px 3px #555;
   }
   h2 {
@@ -53,7 +57,10 @@ By Item
 }
 
 .filter {
-  background-color: rgba(200,220,240,0.9);
+  margin: 80px 0px;
   padding: 20px 30px;
+  
   border-radius: 2px;
+
+  background-color: rgba(200,220,240,0.9);
 }
