@@ -21,11 +21,12 @@ namespace :craigslist_scraper do
 
       uri = URI.parse(polling_url)
       uri.query = URI.encode_www_form(params)
-
+      # Used to obtain the constructed url for copy-pasting into browser manually.
+      #puts uri 
       html = open(uri).read
       result = JSON.parse(html)
 
-      # Print results.
+      ## Print results.
       #puts result["postings"].first["heading"]
       #puts JSON.pretty_generate result["postings"].first["annotations"]
 
@@ -53,7 +54,7 @@ namespace :craigslist_scraper do
           @image.post_id = @post.id
           @image.save
         end
-      end
+      end if result["postings"]
 
       # Update and print new anchor value.
       Anchor.first.update(value: result["anchor"])
@@ -63,6 +64,8 @@ namespace :craigslist_scraper do
     end
 
   end
+
+
 
   desc "Discard old data"
   task  discard_old_data: :environment do
@@ -74,10 +77,12 @@ namespace :craigslist_scraper do
   end
 
 
+
   desc "Destroy all posting data"
   task destroy_all_posts: :environment do
     Post.destroy_all
   end
+
 
 
   desc "Create neighborhood codes in a reference table"
@@ -110,5 +115,7 @@ namespace :craigslist_scraper do
       @location.save
     end
   end
+
+
 
 end

@@ -1,12 +1,9 @@
 .container-fluid
   .row
     .col-xs-12
-      h1 Listing posts
-
       = render "filter"
 
-      = link_to 'New Post', new_post_path
-
+    .col-xs-12
       - if @posts.blank?
         hr
         h4.text-center
@@ -43,7 +40,3 @@
                 td = post.dogs
                 td = post.w_d_in_unit
                 td = post.street_parking
-
-
-
-

@@ -43,24 +43,25 @@ By Item
 #jumbotron-main {
   background-image: url(http://pinterous.com/wp-content/uploads/2014/07/studio-apartments-for-rent-in-financial-district-nyc.jpg);
   background-size: cover;
-  min-height: 800px;
+  min-height: 600px;
 
-  padding: 100px 0px;
+  padding: 80px 0px;
 
-  h1 {
+  h1, h2 {
     color: white;
     text-shadow: 0px 2px 3px #555;
   }
   h2 {
-    text-shadow: 0px 2px 3px #555;
+    margin-bottom: 50px;
   }
+
 }
 
 .filter {
-  margin: 80px 0px;
+  margin: 20px 0px;
   padding: 20px 30px;
   
-  border-radius: 2px;
+  border-radius: 4px;
 
   background-color: rgba(200,220,240,0.9);
 }

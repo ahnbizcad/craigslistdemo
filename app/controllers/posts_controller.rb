@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.order("timestamp DESC")
+    @posts = Post.by_newest
     @posts = @posts.where(bedrooms: params["bedrooms"])   if params["bedrooms"].present?
     @posts = @posts.where(bathrooms: params["bathrooms"]) if params["bathrooms"].present?
     @posts = @posts.where("sqft >= ?", params["min_sqft"])  if params["min_sqft"].present?
